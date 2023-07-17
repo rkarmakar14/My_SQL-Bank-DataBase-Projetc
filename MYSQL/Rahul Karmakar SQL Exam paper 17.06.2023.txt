@@ -1,0 +1,85 @@
+Ans 
+
+1. Foreign key is a constrain which is use as a primary key in child table. Foreign key is use to connect between 2 or more table.
+
+2. There are Four types of join in MySQL. 
+
+		1. Inner Join
+		2. Left Join
+		3. Right Join
+		4. Union Join
+
+3. Potimization of MySQL are followed below:
+
+ 	1. Instead of select * try to select the field column.
+	2. try to avoid select distinct. 
+	3. create join with inner join.
+
+4.	Advantages:
+	1. Faster query processing.
+	2. No coding skill are required.
+	3. Standarrize language.
+	4. Interactive language.
+
+	Disadvantages:
+	1. Complex interface.
+	2. some version are costly.
+	3. It has limited flexibility.
+	4. Limited query performance.
+
+5. To extract same kind of data we use group by.
+
+6. To stop the iteration and perticular value we use limit.
+
+7. Database is a structure way of data, it can be figure, media etc. but table is a two dimensional way which have rows and coloumn.
+
+8. Foreign key is a constrain which is use as a primary key in child table. Foreign key is use to connect between 2 or more table.
+
+9. Using Rollback command we can get back the deleted data and Commit means the changes data cannot make back for view.
+
+10. order by is use to set the table in ascending order or descending order.
+
+11. Left Join: In a left join, all the rows from the left table (the table specified before the LEFT JOIN keyword) are included in the result set, regardless of whether they have matching rows in the right table.
+
+Right Join: In a right join, all the rows from the right table (the table specified before the RIGHT JOIN keyword) are included in the result set, regardless of whether they have matching rows in the left table.
+
+12. To find duplicate records in a SQL table, we can use the GROUP BY clause along with the HAVING clause.
+
+14. To delete a table in MySQL, we can use the DROP TABLE statement.
+
+It permanently removes the specified table from the database.
+Syntax:
+drop table table_name;
+
+15. The ALTER TABLE statement in SQL is used to modify the structure of an existing table. It allows to add, modify, or delete columns, as well as make other changes to the table's definition.
+
+16. To update records in a table in MySQL, we can use the UPDATE statement. The UPDATE statement allows us to modify the values of one or more columns in one or more rows of a table based on specified conditions.
+Here SET command is used along with WHERE clause.
+
+17. The HAVING clause in SQL is used in combination with the GROUP BY clause to filter the result  based on a condition applied to aggregated data.
+
+18. Subquery: A subquery, also known as an inner query or nested query, is a query nested inside another query. It is enclosed within parentheses and is typically used within the WHERE or HAVING clause.
+
+Join: A join is used to combine rows from two or more tables based on related columns.
+
+19. we can retrive the last inserted ID in MySQL using Last_inserted_ID() statement.
+
+20. Like is used to search the values or it is used for better search
+It has 3 types:-
+    1) %i% used to extract value whereever i is present.
+    2) %i is ued to extraxt the value ending with i.
+    2) i% is ued to extraxt the value starting with i.
+
+21. To rename a table in MySQL, we can use the RENAME TABLE statement. 
+The RENAME TABLE statement allows  to change the name of an existing table. 
+
+Example:
+RENAME TABLE current_table_name TO new_table_name;
+
+22. Truncate is used to delete the rows and columns of a table or we can say that Truncate command is used to deleted the data from the table without deleting the structure of the table.
+Syntax:-
+truncate table table_name;
+
+23. select age_group,count(age_group) group by age_group from student;
+
+25. 
