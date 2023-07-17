@@ -1,0 +1,589 @@
+22/05/2023		SQL is Case insensitive.
+
+MANAGEMENT DB
+different b/w database and data
+Data - Data is the collection of facts and figures (fact and fig is nothing but audio, video, images, etc) in lower volume. 
+	data is in an unstructured and unordered format.
+
+DateBase - DataBase is the collection of facts and figures in a larger volume. 
+		the database is in a structured and ordered format. 
+
+DBMS is the Collection of programs or it is software that is used to analyze the data modify the data, insert the data or extract the data.
+
+types of DBMS:
+1. Network-oriented DBMS.
+2. Object-oriented DBMS.
+3. Inheritance DBMS.
+4. R DBMS. (Relation DBMS)
+
+
+R DBMS is the Relation B/w one table to another table is called RDBMS. RDBMS stands for Rows columns and RDBMS is working on the RDBMS model.
+ 
+Types of R DBMS :
+
+1. MYSQL
+2. MongoDB
+3. Oracle
+
+SQL stand for structure query language or structure English query language SEQUEL. It is the language that is used to manage the data and it is using it SQL software.
+MySQL is software that is given to manage the data.
+
+23/05/2023
+
+pic -1
+
+steps for sending the database.
+1. creation of DB (Folder)
+2. Opening the folder in SQL cmd using the cmd use.
+3. Creation of a table with column names and data types.
+4. Inserting the Values.
+5. Extraction of Values.
+
+Variables:
+Variables are the container which is used to store the values.
+
+pic -2
+
+Data type:
+A data type is used to define the variable which kind of data is folding or it will define a type of data.
+
+pic -3
+Note: if the variable names are more than two words then use snake joint. Number_of_mathes. ->(Snake Joint)
+
+1. create a database VTU University;
+2. use VTU University;
+3. create table oxford_college (id int, course varchar (120), duration int ); CSV - Comma Separated Values
+4. Insert into oxford_college (id, course, duration) values (1, "BE",4),(2, "BCA", 3), (3, "Bsc", 3), (4, "BBM", 3);
+5. Select * from oxford_college;( * -> All Column) 
+
+Create a database under the name of Besant Technologies.
+create a Table on the Name of the Student. 1st column -id, 2nd clm- name, 3rd - age, 4th - gender.(Done)
+
+24/05/2023
+
+Primary key: It is a constraint that is used to identify uniqueness in the table.
+rules for declaring primary key:
+1. Primary key should be an integer.
+2. primary key should be not null (Not null is nothing but the column never be having empty values).
+3. the primary key is auto-increment (The auto-increment is nothing but auto_generation of values or automatic generation of values base of the user requirement).
+4. primary key has to be declared as the primary key().
+5. primary key never be duplicated.
+
+pic -4
+
+process :
+1. create database info;
+2. use info;
+3. create table p_info ( id int not null auto increment,primary key(id),name varchar(100),age int);
+4. insert into p_info(name,age) values ("Rama",20);
+5. select * from p_info;
+
+Create a database on the name of sales, and create the table name customers. 1st clm should be id, 2nd clm name, 3rd clm price.
+Desc is nothing but a description of a table. 
+Note: Auto increment for a primary key is optional.
+
+Create a database on the name of animals and create a table on the names of dogs.
+1st clm id int should be primary key, 2nd clm name, 3rd clm age, 4th clm breed, price. (at least 10 dogs) Done
+
+25/05/2023
+
+Crud operation: c stand for create, R stands for Read, U stands for updates,D stands for Delete.
+Create- means the creation of tables and databases.
+Read- is nothing but extraction of details or retrieving the table. Select * from 
+Extracting the only one clm - select <name of the clm, 2nd name> from <table name>
+The update is a command which is used to update a particular value. Note: Here set command is used to set the new name. Where clause is used to referring the old names. 
+
+update (table name) set ( colm name) = (update you want to put) where (clm name) = (the change you want to apply);
+SET SQL_SAFE_UPDATES = 0;
+
+Q1. Update the age 35 where the age 22 is present.
+Q2. Update the gender male where the female is present.
+
+Delete is a command which is used to delete a particular or particular value.
+
+delete from(table name) where (clm name);
+
+truncate is a command which is used to remove all values except the structure of the table.
+truncate <table name>
+select *from <table name>
+
+Drop: Drop is a command which is used to vanish the whole table or database.
+
+drop table <table name>;
+select * from <table name;
+drop database b_technologies;
+
+Q1. Difference b/w drop delete and truncate?
+Q2. Create a database under the name of Rana_university.
+table name students.
+1sr clm id , it should be primary key, 2nd clm f_name, 3rd clm l_name, 4th age, 5th gender, 6th graduated year, 7th course. (25 rows) Done.
+
+26/05/2023
+
+String Functions: These are the functions that are used to work on string input and getting string output.
+
+Types of string function:
+
+1. Concat
+2. Rights
+3. Left
+4. Substring
+5. Replace
+6. Reverse
+7. char_lenght
+8. Concat_ws(with space)
+
+1. Concat: Concat is the string function that is used to merge the two clms or add a dummy string into clm. 
+select concat(F_name,L_name) from students;
+
+Q1. Concat the name and put the dummy string as the name.
+
+Name = Rama
+
+Q2. Merge the 3 clm f_name, L_name, Age, Gender. and one clm to another clm space is required.
+
+Aliases: Aliases is the command which is used to rename the clm or changing the clm name by using "as" keywords. 
+
+char_length: This is the string command which is used to extract the length of a given string.
+Ex: Rama = 4 ,Ramana = 6, Krishna = 7, Radhe = 5
+select char_length("Rama");
+select char_length(F_name) from students;
+select F_name,char_length(F_name) from students;
+
+29/05/2023
+
+Right: Right is a command which is used to extract the right side of a string called as right. Right command will accept two parameters 
+1. reference value 
+2. number of values or how many values users are required.
+ 
+Q1.
+
+extract the 1st value of clm from students(Table)? 
+
+Ans - select right(F_name,1) from students;
+
+extract the last character of F_name? 
+
+Ans - select left(L_name, 1) from students;
+
+extract the 2nd but last character?? 
+
+Ans - select left(right(L_name,2),1) from students;
+
+Extract the values last but 3rd character?? 
+
+Ans - select left(right(L_name,3),1) from students;
+
+select right ("rama", 1) [Rama = Refference Value, 1 = No of Values]
+
+Substring: Substring is a command which is used to extract the part of the string. It will accept 3three parameters.
+1. Reference Values
+2. Position Values
+3. How many Values are required.
+
+Q2. 
+Extract middle char of 1st clm??
+Extract Middle Four characters? 
+
+Ans - select substring("Divya", char_length("Divya")/2,4);
+
+Extract Middle two Characters?? 
+
+Ans - select substring("Divya", char_length("Divya")/2,2); from any Table - select substring(F_name, char_length(F_name)/2,1) from <Table Name>;
+
+Extract the last Four Characters using a substring. 
+
+Ans- select substring(F_name, -4,4) from students;
+
+30/05/2023
+
+Reverse: It is a command which is used to extract the Reverse Value or it is used to me reverse the value.
+
+Ans - select F_name, reverse (F_name) from students;
+
+Q1. Check whether the given string is pallientdrone or not.
+
+Ans - select * from students where F_name = reverse (F_name)
+
+Q2. Extract the values if the char_length of F_name should be greater than 3.
+
+Q3. Extract the char_length of FullName. (Note : F_name is nothing but concatenation of F_name and L_name)
+
+Ans - select concat(F_name," ",L_name),char_length(concat(F_name, " ", L_name)) from students;
+
+Q4. Insert two values into the table those values should be palindrome is there? 
+
+Ans - All the SQL commands will accept only one parameter if it is a chance of using two parameters in that case we have to use concat.
+
+Q5. Extract the values if the half char_length of F_name should be greater than six. 
+
+Ans - select * from students where char_length(F_name)>5;
+
+H.W:
+Q6. Extract odd IDs?
+
+Ans - select * from gym where id % 2 <>0;////// select * from gym where MOD(id,2)<>0;
+
+
+Q7. Extract the even char_length of the full name.
+
+Q8. Extract the even of length of L_name?
+Ans - select* from students where char_length(L_name)%2 =0;
+
+Q9. Difference b/w substring and mid?
+Ans - Both perform for string only. In case, if you have got string "TEST", the MID function will indicate the characters as 1,2,3,4. But with String. substring they will be indicated as 0,1,2,3.
+
+Q10. Write notes on RDBMS.
+
+Ans - RDBMS stands for Relational Database Management Systems. RDBMS is a program used to maintain a relational database. RDBMS is the basis for all MYSQL, Microsoft SQL Server, Oracle, and Microsoft access. RDBMS uses SQL queries to access the data in the database. It is not only an improved version of the database management system, it is a platform of need and necessity. Data is growing at an exponential rate and to manage everything for scalable operations, a proficient system is required. 
+
+Q11. Create a database under the name Workout Center. 
+Table name GYM
+1st clm ID, 2nd clm Trainer ID, 3rd Name, 4th Trainer Name, 5th Joining Month, 6th the resultant weight, cost/price, selling price, Age, Customer Gender, Trainer Gender(25 Rows min) Done
+
+31/05/2023
+
+(Data Analysis)
+Aggregate function: These are the functions that are used to work on multiple rows, and getting output in a single value is called as aggregate function.
+Types of aggregate function :
+1. Count
+2. Min and Max
+3. Avg and Sum
+4. Group by
+
+Count:
+Count is an aggregate function that is used to count the number of rows is called as Count. Note: its function is called as multirow function.
+select count(Name) as total from gym;
+
+Q1. Count the people who joined in the Month of March.
+Ans - select count(Name) as total from gym where Joining_Month = "20th March";
+
+Logical Operators:
+1. And
+2. Or
+3. Between
+4. In
+
+And Operator: And operator always checks two conditions that should be true.
+OR Operator: OR operator will always check for one condition.
+
+Q1. check the people who joined in the month of March and the paid amount is greater than 9000.
+
+Ans - select * from gym where Joining_Month = "27th March" and Selling_price > 9000;
+
+Q2. check the number of people who are decreasing their weight by more than 10 and the trainer is Arjun.
+
+Ans - select * from (Joining_weight- Resultant_weight)>10 or trainer_name = "arjun";
+
+
+01/06/2023
+
+Between: Between operator act as a range. 
+
+EX-
+
+select * from gym where Age>18 and age<30;
+select * from gym where Age between 18 and 30;
+
+In Operator: In the operator is used to extract the values of particular values?
+Ans - select * from gym where id in (1,3); (Only particular id shown it used)
+
+Group by: It is a command which is used to group the same kind of data while presenting it will present the top of the data. 
+
+
+Name			Group			Group by
+						
+Ashwini			Ashiwini		Ashiwini
+Abhi			Abhi 			Abhi
+Chandini		Abhi			Chandini
+Rahul			Chandini		Rahul
+Rahul			chandini
+Abhi			Rahul
+Chandini		Rahul
+
+Code: select Trainer_name from gym  group by T_name;
+
+Q1. select Trainer_Name from gym  group by Trainer_Name;
+
+
+02/06/2023
+
+Q1. How many same names are presents in gym table.?
+Ans - select Name,count(name) from gym  group by Name;
+Q2. get the trainer names how many time it is repeated?
+ans - select Trainer_Name,count(Trainer_name) from gym  group by Trainer_Name;
+Q3. How many male and female are there in gym table?
+Ans - select Customer_gender,count(Customer_gender) from gym group by Customer_gender;
+
+Max and min: 
+Code - 	select min(id) from gym;
+	select max(id) from gym;
+	select id,name from gym where id = (select min(id) from gym);
+	select id,name from gym where id = (select max(id) from gym);
+
+SubQuery: The query inside another query is called a subquery or nested query.
+
+Q1. Who is the person decreases more weight and less weight?
+Ans - select (weight - Resultant_weight_KG), name from gym where (weight - Resultant_weight_KG) = (select max(weight - Resultant_weight_KG) from gym);
+	select (weight - Resultant_weight_KG), name from gym where (weight - Resultant_weight_KG) = (select min(weight - Resultant_weight_KG) from gym);
+Q2. Who is the person having a greater length of their name?
+Ans - select name from gym where char_length(name) = (select max(char_length(name)) from gym);
+Q3. Who is the person having min length of their name?
+Ans - select name from gym where char_length(name) = (select min(char_length(name)) from gym);
+Q4. How many persons start with A?
+Ans - select name from gym where left(name,1) = "A";876098
+
+05/06/2023
+
+Average and Sum: select avg(selling_price) from gym;
+		select sum(selling_price) from gym;
+
+Handling larger database:
+
+Q1. Check how many types of cuisine are present in present in Bangalore Zomato.
+Ans - select Cuisines, count(Cuisines) from bangalorezomatodata group by Cuisines;
+Or  - select count(distinct(Cuisines)) as "Total Cuisines" from bangalorezomatodata;
+Q2. Check the average rating of each hotel.
+Ans - select Name,avg(`Delivery Ratings`) from bangalorezomatodata group by Name;
+Q3. Get the Total cost for each individual hotel.
+Ans - select Name,sum(AverageCost) from bangalorezomatodata group by Name;
+Q4. get the average ratings for each Hotel.
+Ans - select Name,avg(`Delivery Ratings`) from bangalorezomatodata group by Name;
+Q5. According to the area get the amount?
+Ans - select Full_Address,sum(AverageCost) from bangalorezomatodata group by Full_Address;
+Q6. Check how many hotels are there in Bangalore without reputation.
+Ans- select count(distinct name) from bangalorezomatodata;
+
+OFfset
+
+06/06/2023
+
+Distinct: Its a function which is used to remove the duplicates. 
+
+order by: It is a command which is used to arrange the numbers or letters in ascending order or descending order. ascending order key word is 'asc'. Descending key order is 'desc'.
+
+Limit: Limit is a command which is used to stop iteration at perticular value.
+
+Q1. Extract the highest cost value from the banglorezomato without using max and Min;
+Ans - select * from bangalorezomatodata order by AverageCost desc limit 1;
+	  select * from bangalorezomatodata order by AverageCost asc limit 1;
+
+Q1. which position virat kohli score more runs?
+Ans - select Position,Score from virat_kohli_100s where score = (select max(Score) from virat_kohli_100s);
+Q2. Check how many ODI test Virat Kohli Played?
+Ans -  select count(Format), Format from virat_kohli_100s group by Format;
+Q3. Which year Virat Kohli Has highest Strike rate?
+Ans -  select `Strike Rate`, Year from virat_kohli_100s order by `Strike Rate` desc limit 1;
+Q4. As a captain virat kohli how matches won?
+Ans -  select count(Win) from virat_kohli_100s where Captain = "Yes";
+Q5. Extract the average run rate with every country?
+Ans - 
+Q6. Extarct how many matches virat kohli played in India and what is the average wicketing?
+Q7. Which innings virat kohli scored more runs?
+
+
+07/06/2023
+
+if block: 
+
+Q1. If the virat kohli played in India set as home ground. if it is not then Away.
+Ans -  select *, if (`Host Nation` = "India","Home","Away") from virat_kohli_100s;
+Q2. If the Virat Kohli Played 100 set of century if it is not 100 put half century.
+
+08/06/2023
+Constrains in SQL: Constrains are the rules it will define which kind of data has to insert into the table.
+1. Primary key
+2. Foreign Key
+3. Default
+4. Check
+5. View
+6. Index
+7. Not Null
+8. Unique
+
+Not Null: this is a key which is used to always checking the clm is empty or not . if it is empty it will through error. Otherwise it will print the answer.
+
+Check is a constrain which is use to check every row the condition is passing or not.
+
+create table college (id int,name varchar(20), age int check (age>=18));
+insert into college value (1,"Sandeep", 16); 
+#here error will get it because check constraint is violated.
+
+Default: Default is the constraint which is used to filling the values if the user is putting null values.
+
+Unique: It is a constraint which is use to check each value of a row should be unique by comparing next row is called as unique.
+
+Q1. Create database instsgram_clone. create table instragram
+id should be primary key() and it has atleast 4 character, username should be unique , it never be empty(not null) length of user id should be not less than 7to 10. age should be 12,gender not null.
+
+09/06/2023
+
+foreign key: Foreign key is constraint which is used as a primary key in parent table and it is mentioning in another table as foreign key in child table or foreign key is the key which is use to connect between the 2 to 3 table. 
+Note: which table having foreign key is called child table. which table does not have foreign key is called as parent table.
+
+type are:
+1. one to one
+2. one to many
+3. many to one
+The foreign key are the model of one to many relationship.
+
+Benefits of foreign key: 
+1. Deletation should be first in child table, then parent table.
+Inserting value should be first in parent table then child table(it is a meaning of if any id's are entered in child table and those values if they are not present in parent table it through error because any unknown id can't enter child table without notification of parent table.
+
+insert into orders(o_name,id) values("Pizza",7); # Error Massae: Cannot update or add a child row.
+
+12/06/2023
+
+Joints are the command which is used to representation of two tables or more than that.
+
+Types of Joints:
+1. Inner Joints
+2. Right Joint
+3. Left Joint
+4. Full Joint
+
+In SQL Workbench there is no command of full joint hence you have to use union.
+
+Q1. Create a database XYZ company.
+Create a table Employees without Primary key and foreign key. 1clm id, 2nde clm name, gender.
+Table name is HR ,HR id, HR name, Gender, Employee Id.
+
+Q1. Check who all the HR does not have any assign employees.
+Q2. show how many employees does not have HR?
+Q3. How many HR does not assign empoyees?
+Q4. extract the only employees nad hr who all are got assign.
+Q5. extact how many employees are there in my database?
+
+Create a database on the name of ABCD company.
+1st table employee table.
+1st clm emp id,emp name,emp age,emp gender.
+project next table.
+p id,p_name,emp_name,emp_gender.
+
+How many people are allocated.	
+Ans - select * from employee inner join project on employee.emp_name= project.emp_name;
+How many projects does not have employees.
+Ans - select * from employee right join project on employee.emp_name= project.emp_name;
+get the common between employees and projects. 
+Ans - select * from employee inner join project on employee.emp_name= project.emp_name;
+extract the people who get exact one project.
+
+
+13/06/2023
+
+date data types: The date datatype format is for date         YYYY-MM-DD     //     HH:MM:SS
+
+create table info(id int,name varchar(55),dob date,dot time);
+insert into info value(1,"Anushree","2003-01-13","12:12:12");	
+
+Date Different: Date diffrence is the command which is used to extract the values those values are diffrent b/w the date.
+
+Code: select datediff("2023-06-13","2023-06-10");
+
+Current date ,current time both are the function which is used to get the system date and time.
+Code:      select curdate();
+	select current_time();
+	select now();
+
+Q1. Study on date formatting study on time stamp.
+Q2. there is employee join on 1947 aug 15. get the how many years of experience from now?
+
+15/06/2023
+
+Like: Like is the a command which is use to extract values by searching or it is use to do for better search. 
+There are three cases:
+1. Like "%i%";
+It is use to extract the values wherever the i is present.
+2. If the %i is there then it will extract the values wherever the values are ending with "i".
+3. If the "%"using at the last it will extract the values , the values all are starting with that letter. 
+
+If else: If else is the advance command which is use to extract the values whether it true or false.
+select if (10>20,true,false)// select if 
+
+Q1. if the viart kohli faced the balls b/w 0-100 then it is a good batsman, if it is more than 100 good perfomer.
+Ans - select Balls,if(Balls<=100,"Good Batsman","Good Performer")from virat_kohli_100s;
+
+16/06/2023
+
+Offset: It is a command which is use to skip the number of rows. 
+Code:
+
+Conditional operator: It is use to act as a elif condition here we are working more than one condition.
+
+Q1. If the Virat kohli is batting the position is the batting 1 to 3 average strike rate, He played in the position of 3-4 great batsman if more than that he is good in 360.
+Ans - select * 
+
+19/06/2023
+
+Ranking functions or Windows functions: This are the functions which is use to create a saparate window for ranking.
+Types of windows function or ranking function:
+there are 3 types.
+1. Dense Rank
+2. Rank
+3. Row Number
+
+Q1. based on school arrange the study hours.
+
+Dense Rank: it is used to get the output in a conjugative manner. Conjugative manner means if the ranking is repetitive the next rank will be in order. And it will not skip any values.
+
+Rank: Rank is extracting the output in a non-conjugative manner. here ranking is same the next ranking will be one value is skipped is called as Rank.
+
+Row Number: 
+
+Q1. Create database college. create a table, students. 1st clm id, name, sub, marks.
+
+Partition by is nothing by group by.
+over is nothing by creating a window.
+
+Q1. Accordings to the gym trainer arrange the profit.
+
+21/06/2023
+
+Views: Views are virtual table or myth table but it should consist of rows and coloumns. it is use for security purpose.
+2. Code resueability.
+
+All the views are the user unable to see. 
+
+There are two types of views.
+1. Simple view.
+2. Complex View.
+
+Simple View: Simple view is nothing but the operation or creation of view on single table is called as simple table.
+
+Complex view: if the views are creating on multiple tables using join is called as complex view.
+
+Q1. create a view of complex view. the operation will held on caps and drivers.
+
+Triggers: Triggers are pre-defined code it will activate when the condition is matched.
+
+create table on the name of customers. 1st id,BPO person name,ratings.
+
+Types of triggers: 
+1. Before insert
+2. after insert
+3. before update
+4. after update
+5. before delete
+6. after delete
+
+Q1. create a view based on a salaries if the salaries is more than one lakh then hide the data.
+Q2. 
+
+store procedure: Store procedure is nothing but a set of code it will activate when its called, is called as store procedure.
+
+Extracting a perticular person from the table.
+
+Syntax of store procedure: create procedure (procedure name) it is nothing but a name for store procedure.
+begin and the end will explain where the query started and where query is ended.
+the store procedure will accpet only one operator is in. then it will accept the only one parameter. 
+
+24/06/2023
+
+Changing the table name using alter command. 
+
+alter table gym rename gym_center;
+select * from gym_center;
+
+adding the new column to the table using add command.
+Code: alter table gym_center add column Heartbeat int;
